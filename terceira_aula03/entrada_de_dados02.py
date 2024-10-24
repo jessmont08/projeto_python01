@@ -24,7 +24,7 @@ bairro = str(input('entre com seu bairro: '))
 rua = str (input('entre com sua rua: '))
 numero = int (input('entre com o numero da sua casa: '))
 cep = int(input('entre com seu cep: '))
-
+print()
 # puxar comando da biblioteca
 ano_atual = datetime.datetime.now ( ).year
 idade = int(ano_atual) - nascimento
