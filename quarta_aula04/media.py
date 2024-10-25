@@ -18,5 +18,11 @@ print('-' * 30)
 print('SOMATÓRIO')
 print('-' * 30)
 
-print(f'NOTA 1: {nota_1} / NOTA 2: {nota_2} '
-      f'NOTA 3: {nota_3}'/ nota_4: {nota_4}')
+print(f'NOTA 1: {nota_1} | NOTA 2: {nota_2} | ')
+print(f'NOTA 3: {nota_3}| NOTA 4: {nota_4}')
+
+print('=' * 30)
+
+print(f'Media errada = {media}')
+print(f'Media Correta = {media_correta}')
+      
