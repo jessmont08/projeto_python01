@@ -24,5 +24,16 @@ elif b > c and b > a:
     print(f'{b} é o maior valor.')
 elif c > a and c > b:
     print(f'{c} é o maior valor.')
-else: 
-    print('Todos numéros tem o mesmo valor.')
+else:
+     print('Todos numéros tem o mesmo valor')
+
+if a < b and a < c:
+    print(f'{a} é o menor numéro.')
+elif b < c and b < a: 
+    print(f'{b} é o menor numéro.')
+elif c < a and c < b:
+    print(f'{c} é o menor valor.')
+else:
+    print('Todos tem o mesmo valor.')
+
+print('=' * 90)
