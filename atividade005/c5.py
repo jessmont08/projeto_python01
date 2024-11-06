@@ -10,7 +10,7 @@ print('=' * 90)
 
 nome = str(input('ENTRE COM SEU NOME: '))
 
-if 'oliveira' in nome:
+if 'Oliveira' in nome:
     print(f'O nome {nome} contêm o sobrenome Oliveira.')
 else:
     print(f'O nome {nome} não contêm o sobrenome Oliveira.')
