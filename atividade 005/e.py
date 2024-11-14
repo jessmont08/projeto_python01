@@ -13,4 +13,5 @@ for i in range(1, 101):
         soma += i
 
 
-    print(f'{soma}')
+    print(f'{soma}', end= ' | ')
+      

@@ -6,12 +6,19 @@ import os
 
 os.system('cls')
 
+soma = 0
+quantidade = 0
+
+for i in range (1, 100):
     
+    if (i % 2 != 0):
+        continue
+    
+    soma += i
+    quantidade += 1
     
 
-   
-  
+print(f'A soma desses números é: {soma}')   
+print(f'A quantidade de números ímpares de 1-100 é: {quantidade}')
 
-    
-   
-
+print()
