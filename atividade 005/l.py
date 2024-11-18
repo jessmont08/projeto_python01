@@ -19,4 +19,5 @@ while (True):
         print(f'Bem vindo ao sistema, {nome1}')
         break
          
-    print()
+print('=' * 90)
+print()
