@@ -1,9 +1,6 @@
 import os
 os.system('cls')
 
-
-
-
 while (True):
     nome = str(input('Digite o nome ou x para sair: ')).lower()
 
