@@ -1,5 +1,26 @@
-for i in range(5):
-   print(i)
+import os
 
-   ('=' * 90)
-print()   a
+os.system('cls')
+
+#entrada de dados
+
+inicio = int(input('Inicio: '))
+fim = int(input('Fim: '))
+
+#dois laços de repetição pa um mutiliplicador o outro
+
+for i in range(inicio, fim + 1):  
+    for c in range(inicio, fim + 1):
+      
+#declaração de como o computador deve aplicar o calculo      
+      
+      multiplicador = i * c 
+
+
+#saida e a separacao pelo end
+      
+      print(multiplicador, end= " ")
+
+# maneira de separar os digitos ficar pulando
+      
+    print()
