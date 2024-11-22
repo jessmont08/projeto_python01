@@ -6,7 +6,7 @@ os.system('cls')
 
 inicio = int(input('Entre com inicio: '))
 fim = int(input('Entre com o fim: '))
-00
+
 for i in range(inicio, fim):
     
     divisor = 0
