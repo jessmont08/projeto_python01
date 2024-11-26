@@ -1,19 +1,15 @@
 
-# Mostre a quantidade de notas que foram lidas.
-# Exiba todas as notas na ordem em que foram informadas.
-# Exiba todas as notas na ordem inversa à que foram informadas, uma abaixo da outra.
-# Calcule e mostre a soma das notas.
-# Calcule e mostre a média das notas.
-
 import os
 os.system('cls')
 
 lista = []
+soma = 0
 
 while (True):
 
     print('Digite "s" para sair.')
-    notas = str(input('Entre com as notas: ')).lower().strip()
+    notas = input('Entre com as notas: ').lower().strip()
+    
 
     if notas != "s":
         print(f'Digite a proxíma.')
@@ -21,15 +17,23 @@ while (True):
         break
     
     lista.append(notas)
+    number = int(notas)
+    soma += number
+
 print(f'A lista gerada é {lista}')
 
 quantidade = len(lista)
 
-print(f' A quantidade de notas inseridas no sistema foi: {quantidade}.')
+print(f'A quantidade de notas inseridas no sistema foi: {quantidade}.')
 
 reversa = lista[::-1]
 
+print('Notas invertidas: ')
 for i in range(len(lista)):
-    print(f'notas invertidas {reversa[i]}')
+    print(f'{reversa[i]}')
 
-    
+print(f'A soma das notas é {soma}')
+
+media = soma / quantidade
+
+print(f'A média das notas é {media}')
