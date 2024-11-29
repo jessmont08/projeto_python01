@@ -32,7 +32,7 @@ for c in range(0, 15):
 
 print('=' * 90)
 
-for c in range(0, 15):
+for c in range(0, 16):
     if c % 2 != 0:
         print(f'Os números ímpares são: {c}')
     else: 
@@ -49,7 +49,7 @@ for c in range(15):
 
 print('=' * 90)
 
-for c in range(c):
+for c in range(16):
 
     if c % 3 == 0:
         print(f'É multiplo de 3: {c}')
@@ -58,10 +58,10 @@ for c in range(c):
 
 print('=' * 90)
 
-for c in range(15): 
+for c in range(16): 
             
     if c % 4 == 0:
-         print(f'É multiplo de 4: {c}')
+         print(f'É multiplo de 4: {c}') 
                 
     else:
         continue
