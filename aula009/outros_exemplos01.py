@@ -26,3 +26,4 @@ for elemento in periodica:
     for chave, valor in elemento.items():
         print(f'{chave.capitalize()} : {valor}')
     print('-' * 90)
+

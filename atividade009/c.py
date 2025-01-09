@@ -2,25 +2,30 @@ import os
 
 os.system('cls')
 
-dicionario = {}
+armazenamento = {}
 
-for i in range(1, 4):
+for i in range(1, 6):
     ferramentas = str(input('Digite o nome da ferramenta: '))
     descricao = str(input('Digite o material da ferramenta: '))
-    dicionario[ferramentas] = descricao
 
-print(dicionario)
+    # manda pro armazenamento
+    armazenamento[ferramentas] = descricao
+
+print(armazenamento)
 
 while True:
     alteracao = str(input('Deseja alterar alguma descrição? Digite s ou n: ')).strip().lower()
 
     if alteracao == 's':
         valor_alterado = str(input('Digite a descrição a ser alterada: '))
-        novo_valor = input('Digite a nova descrição: ')
+        if valor_alterado in armazenamento:
+            novo_valor = input('Digite a nova descrição: ')
 
-        # troca somente o valor que foi colocado em valor alterado.
-        dicionario[ferramentas] = novo_valor
+            armazenamento[ferramentas] = novo_valor
 
+        else:
+            print("Não existe essa descrição.")
+        
     elif alteracao == 'n':
         print('Nenhuma alteração.')
         break
@@ -28,25 +33,25 @@ while True:
     else:
         print('Digite s ou n.')
 
-# conta quantos pares tem no dicionario.
-valor_atual = len(dicionario)
+# conta quantos pares tem no armazenamento.
+valor_atual = len(armazenamento)
 
 print(f'No dicionário tem atualmente {valor_atual} itens.')
 
 # mostra os valores, sem as chaves.
-descricao = dicionario.values()
-print(f'As descrições atuais são: {descricao}')
+for descricao in armazenamento.values():
+    print(f'As descrições atuais são: {descricao}')
 
-# se fosse utilizado somente o dicionario sem items apareceria somente as chaves.
-dicionario_ordenado = sorted(dicionario)
-print(f'O armazenamento ordenado é {dicionario_ordenado}. ')
+# se fosse utilizado somente o armazenamento sem items apareceria somente as chaves.
+armazenamento_ordenado = sorted(armazenamento.items())
+print(f'O armazenamento ordenado é {armazenamento_ordenado}. ')
 
-# preciso terminar
+
 # split tem a função de separar os nomes em dois e len conta quantos teve.
-# se o contador estiver dentro da iteracao ele sempre vai voltar pro zero
+# se o contador estiver dentro da iteracao ele sempre vai voltar pro zero e nunca vai somar.
 
 relatorio = 0
-for ferramentas in dicionario: 
+for ferramentas in armazenamento: 
     quantidade = ferramentas.split()
     contagem = len(quantidade)
 
