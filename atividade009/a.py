@@ -13,5 +13,4 @@ for i in range(1, 5):
     valor = input(f'Digite o {i}º valor: ').strip().lower()
     dicionario[chave] = valor
 
-
 print(dicionario)
