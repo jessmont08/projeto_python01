@@ -35,7 +35,7 @@ while True:
         
 
         if item_alterado in vinhos:
-            subitem_alterado = input('Digite o quer alterar: ').strip().lower()
+            subitem_alterado = input('Digite o que quer alterar: ').strip().lower()
 
             #  verifica se a numeração do vinho tem o valor e/ou chave do subitem alterado
             if subitem_alterado in vinhos[item_alterado]:

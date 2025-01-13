@@ -46,7 +46,6 @@ for descricao in armazenamento.values():
 armazenamento_ordenado = sorted(armazenamento.items())
 print(f'O armazenamento ordenado é {armazenamento_ordenado}. ')
 
-
 # split tem a função de separar os nomes em dois e len conta quantos teve.
 # se o contador estiver dentro da iteracao ele sempre vai voltar pro zero e nunca vai somar.
 
