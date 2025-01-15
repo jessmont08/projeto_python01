@@ -52,4 +52,18 @@ ordenados = sorted(academia.items(), key= lambda item: item[1]['tipo'])
 for keys, values in ordenados:
     print(f'{keys} : {values}')
 
-# faltou os relatorios
+cardio_aparelhos = 0
+
+for keys, values in academia:
+    if values['tipo'] == 'cardio':
+        cardio_aparelhos += 1
+
+print(f'Há {cardio_aparelhos} aparelhos na academia.')
+
+reparos = 0
+
+for keys, values in academia:
+    if values['estado'] == 'necessitando reparos':
+        reparos += 1
+
+print(f'Há {reparos} precisando de reparos.')
