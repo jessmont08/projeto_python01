@@ -33,6 +33,8 @@ while True:
     else:
         print('Digite s ou n.')
 
+filmes_ordenados = dict(sorted(filmes.items(), key= lambda item:item[0]))
+
 filmes_longos = 0
 for values in filmes.values():
     separador = values['duração'].split(':')

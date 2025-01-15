@@ -54,7 +54,7 @@ for keys, values in ordenados:
 
 cardio_aparelhos = 0
 
-for keys, values in academia:
+for values in academia.values():
     if values['tipo'] == 'cardio':
         cardio_aparelhos += 1
 
@@ -62,7 +62,7 @@ print(f'Há {cardio_aparelhos} aparelhos na academia.')
 
 reparos = 0
 
-for keys, values in academia:
+for values in academia.values():
     if values['estado'] == 'necessitando reparos':
         reparos += 1
 

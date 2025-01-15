@@ -4,7 +4,7 @@ os.system('cls')
 
 biblioteca = {}
 
-for i in range(1, 4):
+for i in range(1, 2):
     titulo = str(input('Digite o nome do livro: ')).lower()
     autor = str(input('Digite o nome do autor: ')).lower()
     lancado_em = int(input('Digite o ano de lançamento: '))
