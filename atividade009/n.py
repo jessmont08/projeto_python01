@@ -43,7 +43,6 @@ for values in loja.items():
     if loja['categoria'] == 'eletrônico':
         eletronicos += 1
 
-
 for keys, values in loja.items():
     print(f'{keys}: {values}')
     
