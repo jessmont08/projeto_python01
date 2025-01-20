@@ -38,8 +38,7 @@ filmes_ordenados = dict(sorted(filmes.items(), key= lambda item:item[0]))
 filmes_longos = 0
 for values in filmes.values():
     separador = values['duração'].split(':')
-    horas = int(separador)
-
+    horas = int(separador[0])
 
     if horas[0] >= 2:
         filmes_longos += 1
