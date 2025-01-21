@@ -4,7 +4,7 @@ import os
 os.system('cls')
 
 def converter_temp(fahrenheint):
-    celsius = (fahrenheint - 32) * 1.8
+    celsius = (fahrenheint - 32) * 5 / 9
 
     return celsius
 
