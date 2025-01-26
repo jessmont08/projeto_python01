@@ -68,3 +68,11 @@ def operando_valores(x, y, escolha):
         resto = x % y
         return resto
 
+
+
+
+# main
+x, y = receber_num()
+escolha = escolher_menu()
+resultado = operando_valores(x, y, escolha)
+print(f'O resultado é {resultado}')
