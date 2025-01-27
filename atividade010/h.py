@@ -3,6 +3,8 @@
 # seu programa deverá listar os dados dos clientes e a média. Para sair do programa o usuário deverá digitar o valor zero(0). 
 # O número de clientes é indefinido. 
 
+import os
+
 def cadastrar_clientes():
     academia = dict()
     while True:
@@ -12,26 +14,23 @@ def cadastrar_clientes():
         if cliente != '0':
             altura = float(input('Digite a altura: '))
             peso = float(input('Digite o peso: '))
+            codigo = int(input('Digite o código: '))
 
         else:
             print('Saindo...')
             break
 
-    academia['nome'] = cliente
-    academia['altura'] = altura
-    academia['peso'] = peso
+        academia[codigo] = {'cliente' : cliente,
+                            'altura': altura,
+                            'peso': peso}
 
+    os.system('cls')
     return academia
 
-def listar_clientes(academia):
-    for keys, values in academia.items():
-        print('=' * 90)
-        print(f'O nome do cliente é {keys}')
-        print(f'O peso é {values["peso"]}')
-        print(f'A altura é {values["altura"]}')
-        print('=' * 90)
-
 def calcular_media(academia):
+    if not academia:
+        return 0, 0
+
     contagem = len(academia)
     soma_peso = sum(cliente["peso"] for cliente in academia.values())
     soma_altura = sum(cliente["altura"] for cliente in academia.values())
@@ -41,6 +40,21 @@ def calcular_media(academia):
 
     return media_peso, media_altura
 
+def listar_clientes(academia):
+    for keys, values in academia.items():
+        print('=' * 90)
+        print(f'O nome do cliente é {keys}')
+        print(f'O peso é {values["peso"]}kg.')
+        print(f'A altura é {values["altura"]}m.')
+        print('=' * 90)
+
 academia = cadastrar_clientes()
-listar_clientes(academia)
 media_peso, media_altura = calcular_media(academia)
+listar_clientes(academia)
+
+print('=' * 90)
+print(f'A média dos clientes de altura é'
+      f'\né {media_altura}m.')
+print(f'A média dos clientes de peso é'
+      f'\né {media_peso}kg.')
+print('=' * 90)
