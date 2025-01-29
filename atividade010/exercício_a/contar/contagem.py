@@ -1,4 +1,4 @@
-def contar_num(*numeros): 
+def contar_num(numeros): 
 
     lista_pares = []
     lista_impares = []
@@ -11,5 +11,6 @@ def contar_num(*numeros):
 
     cont_par = len(lista_pares)
     cont_impar = len(lista_impares)
+    numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
     return lista_pares, lista_impares, cont_par, cont_impar
