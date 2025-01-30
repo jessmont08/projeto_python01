@@ -37,7 +37,7 @@ with open(arquivo, 'w', newline='') as arquivo_csv:
     # Cria um objeto DictWriter que usará 'arquivo_csv' para gravar os campos.
     # fieldnames define a ordem dos campos no arquivo CSV.
     # delimiter=';': é o separador
-    escrever = csv.DictWriter(arquivo_csv, fieldnames= campos, delimiter= '')
+    escrever = csv.DictWriter(arquivo_csv, fieldnames= campos, delimiter=';')
 
     # writer.writerheader(): Graa a liha de cabeçalho no
     # arquivo CSV usando os nomes de campos definidos em fieldnames.
