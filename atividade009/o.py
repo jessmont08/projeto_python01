@@ -67,3 +67,4 @@ for values in academia.values():
         reparos += 1
 
 print(f'Há {reparos} precisando de reparos.')
+
