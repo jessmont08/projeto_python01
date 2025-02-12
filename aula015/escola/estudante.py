@@ -5,7 +5,6 @@ class Estudante:
 
         self.notas = []
 
-
     def adicionar_notas(self, nota):
         self.notas.append(nota)
 
@@ -16,10 +15,9 @@ class Estudante:
         
         else:
             return 0
-        
     
     def resultado(self):
-        media_final = self.media 
+        media_final = self.media()
         if media_final > 7:
             return 'Aprovado.'
         elif media_final >= 5:
