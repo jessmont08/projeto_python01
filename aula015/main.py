@@ -1,5 +1,5 @@
 import os
-from escola.cadastro import cadastrar_estudante
+from escola.cadastro.cadastro import cadastrar_estudante
 from escola.resultado import exibir_resultados
 
 def main():

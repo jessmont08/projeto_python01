@@ -1,10 +1,10 @@
-from escola.estudante import Estudante
+from escola.cadastro.cadastro import estudante
 
 def cadastrar_estudante():
     nome = input('Digite o nome do aluno: ')
     idade = int(input(f'Digite a idade do/a {nome}: '))
 
-    estudante = Estudante(nome, idade)
+    estudante = estudante(nome, idade)
 
     while True:
         try:
