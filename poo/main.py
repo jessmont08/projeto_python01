@@ -29,7 +29,7 @@ else:
 
 if escolha == 1:
     calculos = OperacoesBasicas(a, b)
-    resultado = calculos.somar()
+    resultado = calculos.somar
     print(resultado)
     print('=' * 90)
 
