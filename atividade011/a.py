@@ -1,11 +1,23 @@
 # Faça um programa que peça 3 valores, depois calcule e imprima  a soma e a multiplicação desses valores. 
 
+# cria a classe
 class Calcular:
     def __init__(self, a, b, c):
         self._a = a
         self._b = b
         self._c = c
 
+# setters edita os valores
+    def set_a(self, valor1):
+        self._a = valor1
+    
+    def set_b(self, valor2):
+        self._b = valor2
+
+    def set_c(self, valor3):
+        self._c = valor3
+
+# getters pegam os valores para ver
     def get_a(self):
         return self._a
     
@@ -15,32 +27,26 @@ class Calcular:
     def get_c(self):
         return self._c
 
-    def get_a(self, value):
-        self._a = value
-    
-    def get_b(self, value):
-        self._b = value
-
-    def get_c(self, value):
-        self._c = value
-
+# metodo para multiplicar
     def multiplicar(self):
         multiplicacao = self._a * self._b * self._c
         return multiplicacao
     
+# metodo para somar
     def somar(self):
         soma = self._a + self._b + self._c
         return soma
 
-    def entrar_valores(self):
-        valor1 = int(input('Digite o 1°: '))
-        valor2 = int(input('Digite o 2°: '))
-        valor3 = int(input('Digite o 3°: '))
+# entrada de dados
+valor1 = int(input('Digite o 1°: '))
+valor2 = int(input('Digite o 2°: '))
+valor3 = int(input('Digite o 3°: '))
 
-        return valor1, valor2, valor3
-    
-calculos = Calcular
-somando = calculos.somar(calculos.entrar_valores)
-multiplicando = calculos.multiplicar(calculos.entrar_valores)
+# chama a classe e adiciona os valores
+contas =  Calcular(valor1, valor2, valor3)
 
-print(somando, multiplicando)
+# chamada de metodos
+resultado_soma = contas.somar()
+resultado_multiplicacao = contas.multiplicar()
+
+print(resultado_multiplicacao, resultado_soma)
