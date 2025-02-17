@@ -24,6 +24,8 @@ class Divisao:
 valor1 = int(input('Digite o primeiro valor: '))
 valor2 = int(input('Digite o segundo valor: '))
 
-calculo = Divisao(valor1, valor2)
+calculo = Divisao(0, 0)
+calculo.set_a(valor1)
+calculo.set_b(valor2)
 resultado = calculo.dividir()
 print(f'O resultado é {resultado:.4f}')

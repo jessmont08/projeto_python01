@@ -15,6 +15,7 @@ class Tabuada:
             print(f'{self.get_inteiro()} x {x} = {multiplicacao}')
 
 numero = input('Digite o valor: ')
-calculos = Tabuada(numero)
+calculos = Tabuada(0)
+calculos.set_inteiro(numero)
 
 calculos.calcular_tabuada()

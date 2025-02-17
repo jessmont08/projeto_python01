@@ -43,7 +43,10 @@ valor2 = int(input('Digite o 2°: '))
 valor3 = int(input('Digite o 3°: '))
 
 # chama a classe e adiciona os valores
-contas =  Calcular(valor1, valor2, valor3)
+contas =  Calcular(0, 0, 0)
+contas.set_a(valor1)
+contas.set_b(valor2)
+contas.set_c(valor3)
 
 # chamada de metodos
 resultado_soma = contas.somar()

@@ -19,6 +19,7 @@ class Numero:
         return sucessor
     
 valor = int(input('Digite o valor que deseja ver: '))
-calculo = Numero(valor)
+calculo = Numero(0)
+calculo.set_a(valor)
 
 print(f'O antecessor é {calculo.antecessor()} e o sucessor é {calculo.sucecessor()}')

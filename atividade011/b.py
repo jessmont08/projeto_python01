@@ -22,6 +22,7 @@ class Idade:
         return idade
 
 datadonascimento = input('Digite sua data de nascimento: ')
-calculo = Idade(datadonascimento)
+calculo = Idade(0)
+calculo.set_anodenasimento(datadonascimento)
 resposta = calculo.calcular_idade()
 print(resposta)

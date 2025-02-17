@@ -16,6 +16,7 @@ class Reais:
         return conversao
     
 reais = float(input('Digite o valor que quer converter: '))
-dolares = Reais(reais)
+dolares = Reais(0)
+dolares.set_dinheiro(reais)
 
-print(f'{dolares.get_dinheiro()} é equivalente a {dolares.converter_para_dolares():.2f}')
+print(f'{dolares.get_dinheiro()}BRL é equivalente a {dolares.converter_para_dolares():.2f}USD.')

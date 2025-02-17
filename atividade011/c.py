@@ -41,7 +41,12 @@ nota2 = int(input(f'Digite a 2° nota: '))
 nota3 = int(input(f'Digite a 3° nota: '))
 nota4 = int(input(f'Digite a 4° nota: '))
 
-calculo = Media(nota1, nota2, nota3, nota4)
+calculo = Media(0, 0, 0, 0)
+calculo.set_nota1(nota1)
+calculo.set_nota2(nota2)
+calculo.set_nota3(nota3)
+calculo.set_nota4(nota4)
+
 resultado = calculo.calcular_media()
 print(f'{resultado}')
     

@@ -23,6 +23,8 @@ class Retangulo:
     
 comprimento = int(input('Digite o comprimento: '))
 largura = int(input('Digite a largura: '))
-calculo = Retangulo(comprimento, largura)
+calculo = Retangulo(0, 0)
+calculo.set_a(comprimento)
+calculo.set_b(largura)
 
 print(f'O perímetro mede: {calculo.calcular_perimetro()}')

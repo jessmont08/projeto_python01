@@ -19,7 +19,8 @@ class Metros:
         return milimetros
     
 metros = int(input('Digite a quantidade de metros: '))
-medida = Metros(metros)
+medida = Metros(0)
+medida.set_a(metros)
 
 print(f'A conversão de {medida.get_a()} para centrímetros'
       f' é {medida.converter_centimetros()}')

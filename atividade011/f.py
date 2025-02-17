@@ -21,7 +21,8 @@ class DobroTriplo:
     
 valor = int(input('Digite o valor: '))
 
-calculo = DobroTriplo(valor)
+calculo = DobroTriplo(0)
+calculo.set_a(valor)
 
 print(f'O dobro de {calculo.get_a()} é {calculo.operando_dobro()}'
       f' e o triplo é {calculo.operando_triplo()}')
