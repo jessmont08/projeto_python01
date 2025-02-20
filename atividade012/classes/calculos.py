@@ -5,6 +5,7 @@
 # múltiplas superfícies, armazená-las em uma lista, e usar um laço for para calcular o gasto de tinta e exibir os dados de cada superfície. 
 # Também deve ser possível filtrar as superfícies por tipo. O objetivo é praticar o uso de listas, loops, condicionais e herança.
 
+import os
 
 class Superficie:
     def __init__(self, nome='', area=0, tipo=''):
@@ -75,20 +76,22 @@ class CadastrarExibir():
             area = int(input('Digite a área da superfície (em metros quadrados): '))
 
             if tipo == 'parede':
-                Superficie = Parede(area)
+                superficie = Parede(area)
             elif tipo == 'teto':
-                Superficie = Teto(area)
+                superficie = Teto(area)
             elif tipo == 'porta':
-                Superficie = Porta(area)
+                superficie = Porta(area)
 
-            gastos = Superficie.calcular_tinta()
-            
+            gastos = superficie.calcular_tinta()
+            cadastros = {'nome': nome, 'area': area, 'tipo': tipo, 'gasto' : gastos}
+            self.tintas.append(cadastros)
+             
             saida = input('Deseja continuar? s ou n: ')
             if saida == 'n':
                 break
+            os.system('cls')
 
-            cadastros = {'nome': nome, 'area': area, 'tipo': tipo, 'gasto' : gastos}
-            self.tintas.append(cadastros)
+
 
     def exibindo(self):
         for cadastros in self.tintas:
@@ -98,44 +101,21 @@ class CadastrarExibir():
             print(f'Gasto: {cadastros["gasto"]}')
     
     def filtrando(self):
-        print('FILTRAR POR: ')
-        print('1. Parede.')
-        print('2. Teto.')
-        print('3. Porta.')
-        print('4. Sair.')
+        print('escolha qual tipo deseja ver. ')
+        escolha_tipo = input('parede, teto ou porta: ')
+        tipos_validos = ['parede', 'teto', 'porta']
 
-        while True:
-            escolha = int(input('Escolha: '))
-            if escolha == 1: 
+        if escolha_tipo in tipos_validos:
                 for cadastros in self.tintas:
-                    if cadastros['tipo'] == 'parede':
+                    if cadastros['tipo'] == escolha_tipo:
                         print(f'Tinta: {cadastros["nome"]}')
                         print(f'Area: {cadastros["area"]}')
                         print(f'Tipo: {cadastros["tipo"]}')
                         print(f'Gasto: {cadastros["gasto"]}')
+                        
+        else:
+            print('Digite uma opção válida.')
             
-            if escolha == 2: 
-                for cadastros in self.tintas:
-                    if cadastros['tipo'] == 'teto':
-                        print(f'Tinta: {cadastros["nome"]}')
-                        print(f'Area: {cadastros["area"]}')
-                        print(f'Tipo: {cadastros["tipo"]}')
-                        print(f'Gasto: {cadastros["gasto"]}')
-                
-            if escolha == 3: 
-                for cadastros in self.tintas:
-                    if cadastros['tipo'] == 'porta':
-                        print(f'Tinta: {cadastros["nome"]}')
-                        print(f'Area: {cadastros["area"]}')
-                        print(f'Tipo: {cadastros["tipo"]}')
-                        print(f'Gasto: {cadastros["gasto"]}')
-            
-            if escolha == 4:
-                print('SAIDA SOLICITADA.')
-                break             
-
-
-
 superficie1 = Superficie()
 cadastro = CadastrarExibir()
 
