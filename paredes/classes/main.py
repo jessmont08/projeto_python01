@@ -1,4 +1,4 @@
-from classes.cadastrando import CadastrarExibir
+from cadastrando import CadastrarExibir
 
 cadastro = CadastrarExibir()
 
