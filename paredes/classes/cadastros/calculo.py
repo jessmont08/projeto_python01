@@ -16,22 +16,27 @@ class Superficie:
     @property
     def nome(self):
         return self._nome
+    
     # decorator
     @nome.setter
     def nome(self, nome_tinta):
         self._nome = nome_tinta
+
     # decorator
     @property
     def area(self):
         return self._area
+    
     # decorator
     @area.setter
     def area(self, area_tinta):
         self._area = area_tinta
+
     # decorator
     @property
     def tipo(self):
         return self._tipo
+    
     # decorator
     @tipo.setter
     def tipo(self, tipo_tinta):
